@@ -1,0 +1,108 @@
+.place-cards-container {
+    width: 50%;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .place-cards-container h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .place-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .place-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .place-card-header {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .place-card-header h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .place-type {
+    display: inline-block;
+    font-size: 0.7rem;
+    background-color: #e0e0e0;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+  }
+  
+  .place-card-body {
+    padding: 1rem;
+  }
+  
+  .place-card-body p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .place-rating {
+    font-weight: bold;
+  }
+  
+  .place-distance {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.5rem;
+  }
+  
+  .place-card-footer {
+    padding: 1rem;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+  }
+  
+  .map-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+  
+  .map-link:hover {
+    background-color: #152a5f;
+  }
+  
+  .loading-indicator, .no-data-message {
+    text-align: center;
+    color: #888;
+    padding: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .place-cards-container {
+      width: 100%;
+      height: 50%;
+    }
+    
+    .cards-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
